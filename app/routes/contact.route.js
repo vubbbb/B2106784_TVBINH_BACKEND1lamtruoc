@@ -3,6 +3,9 @@ const contacts = require("../controllers/contact.controller");
 
 const router = express.Router();
 
+/** khi có yêu cầu http.. đến đường dẫn "/", các hàm
+từ module contact sẽ được gọi để thực thi theo yêu cầu
+ tương ứng*/ 
 router.route("/")
     .get(contacts.findAll)
     .post(contacts.create)
